@@ -1,12 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eureka Kitchen | Home</title>
-  <link rel="stylesheet" href="./dist/output.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eureka Kitchen</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  
+
+<body class="bg-black text-white">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full bg-black/80 backdrop-blur z-50">
+    <nav class="flex items-center justify-between px-6 md:px-16 py-4">
+
+      <h1 class="text-xl md:text-2xl font-bold text-orange-500">Eureka Kitchen</h1>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="bg-orange-500 px-4 py-2 rounded-full">Home</a>
+        <a href="about.html" class="hover:text-orange-400">About</a>
+        <a href="menu.html" class="hover:text-orange-400">Menu</a>
+        <a href="contact.html" class="hover:text-orange-400">Contact</a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+      <label for="menu-toggle" class="md:hidden cursor-pointer">
+        <div class="space-y-1">
+          <span class="block w-6 h-0.5 bg-white"></span>
+          <span class="block w-6 h-0.5 bg-white"></span>
+          <span class="block w-6 h-0.5 bg-white"></span>
+        </div>
+      </label>
+
+      <!-- Mobile Menu -->
+      <div class="absolute top-full left-0 w-full bg-black flex-col items-center gap-4 py-6 hidden peer-checked:flex md:hidden">
+        <a href="index.html" class="bg-orange-500 px-6 py-2 rounded-full">Home</a>
+        <a href="about.html" class="hover:text-orange-400">About</a>
+        <a href="menu.html" class="hover:text-orange-400">Menu</a>
+        <a href="contact.html" class="hover:text-orange-400">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="h-screen flex items-center justify-center text-center px-4 md:px-6 bg-cover bg-center"
+    style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600');">
+
+    <div class="bg-black/60 p-6 md:p-8 rounded-xl max-w-xl">
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-orange-500 mb-4">
+        Eureka Kitchen
+      </h1>
+      <p class="text-gray-300 mb-6 text-sm md:text-base">
+        Fine Dining & Takeaway Experience
+      </p>
+
+      <a href="menu.html"
+        class="bg-orange-500 px-6 py-3 rounded-full font-semibold hover:bg-orange-600">
+        View Menu
+      </a>
+    </div>
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="bg-orange-500 py-6 text-center text-sm md:text-base font-semibold px-4">
+    <div class="flex flex-col md:flex-row justify-center gap-6">
+      <span>Free Delivery Over ₦5,000</span>
+      <span>Open Daily 8am – 10pm</span>
+      <span>Fresh Ingredients</span>
+      <span>Top Rated</span>
+    </div>
+  </section>
+
+  <!-- GOOGLE MAPS SECTION -->
+  <section class="py-12 px-4 md:px-6">
+    <h2 class="text-2xl font-bold text-center mb-6">Find Us in Jos</h2>
+
+    <div class="max-w-4xl mx-auto">
+      <iframe
+        src="https://maps.google.com/maps?q=Kilimanjaro%20Restaurant%20Jos&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        class="w-full h-[300px] md:h-[400px] rounded-lg"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
 </body>
 </html>
