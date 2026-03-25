@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body>
+ <section id="contact" class="px-4 py-10 bg-[#292017] text-white">
+  <h2 class="text-3xl md:text-4xl font-bold text-[#F59B13] text-center mb-10">
+    Contact Us
+  </h2>
+
+  <!-- GRID CONTAINER -->
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+
+    <!-- LEFT SIDE (INFO) -->
+    <div class="space-y-6 text-center md:text-left">
+      <div>
+        <p class="mb-1">Email: info@eurekakitchen.com</p>
+        <p>Phone: +234 800 000 0000</p>
+      </div>
+
+      <!-- OPENING HOURS -->
+      <div>
+        <h3 class="text-2xl font-semibold text-[#F59B13] mb-2">
+          Opening Hours
+        </h3>
+        <p>Mon - Fri: 9am - 10pm</p>
+        <p>Sat - Sun: 10am - 11pm</p>
+      </div>
+
+      <!-- MAP -->
+      <iframe
+        src="https://maps.google.com/maps?q=lagos&output=embed"
+        class="w-full h-64 rounded-xl shadow-lg">
+      </iframe>
+    </div>
+
+    <!-- RIGHT SIDE (FORM) -->
+    <div class="bg-[#1f170f] p-6 md:p-8 rounded-2xl shadow-xl">
+      <h3 class="text-xl md:text-2xl font-bold text-[#F59B13] mb-6 text-center">
+        Send us a Message
+      </h3>
+
+      <div class="space-y-4">
+        <input 
+          type="text" 
+          placeholder="Your Name" 
+          class="w-full p-3 rounded-lg border border-[#F59B13] bg-transparent text-white focus:outline-none focus:ring-2 focus:ring-[#F59B13]"
+        >
+
+        <input 
+          type="email" 
+          placeholder="Your Email" 
+          class="w-full p-3 rounded-lg border border-[#F59B13] bg-transparent text-white focus:outline-none focus:ring-2 focus:ring-[#F59B13]"
+        >
+
+        <textarea 
+          placeholder="Message" 
+          class="w-full p-3 rounded-lg border border-[#F59B13] bg-transparent text-white h-32 focus:outline-none focus:ring-2 focus:ring-[#F59B13]"
+        ></textarea>
+
+        <button 
+          class="w-full bg-[#F59B13] text-black font-bold py-3 rounded-lg hover:bg-[#A46915] transition-colors">
+          Send
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
