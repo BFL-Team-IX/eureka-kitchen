@@ -10,12 +10,10 @@
         html { scroll-behavior: smooth; }
         body { 
             font-family: 'Poppins', sans-serif; 
-            background-color: #fdfaf5;
-            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
         }
         .font-script { font-family: 'Caveat', cursive; }
         .font-heading { font-family: 'Playfair Display', serif; }
-        
+
         .header-clip {
             background: linear-gradient(135deg, #d3640f 0%, #743b18 100%);
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
@@ -46,10 +44,21 @@
         }
     </style>
 </head>
-<body class="antialiased text-stone-800">
+<body class="antialiased text-stone-100 bg-slate-950 overflow-x-hidden">
+    <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_10%_20%,rgba(245,152,12,0.35),transparent_40%),radial-gradient(circle_at_80%_5%,rgba(255,255,255,0.08),transparent_32%),linear-gradient(180deg,#020617,#0f172a)]"></div>
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/90 backdrop-blur-lg">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+            <a href="index.html" class="text-xl font-bold text-orange-400">Eureka Kitchen</a>
+            <div class="flex items-center gap-2 text-sm md:gap-3">
+                <a href="index.html" class="rounded-full px-4 py-2 text-stone-100 transition hover:bg-white/10">Home</a>
+                <a href="about.html" class="rounded-full px-4 py-2 text-stone-100 transition hover:bg-white/10">About</a>
+                <a href="menu.html" class="rounded-full bg-orange-500 px-4 py-2 font-semibold text-black">Menu</a>
+                <a href="contact.html" class="rounded-full px-4 py-2 text-stone-100 transition hover:bg-white/10">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-    <div class="header-clip absolute top-0 left-0 w-full h-[450px] z-0"></div>
-    
+    <div class="header-clip absolute top-16 left-0 w-full h-[450px] z-0"></div>
     <header class="relative z-10 max-w-7xl mx-auto px-8 pt-12 flex flex-col md:flex-row justify-between items-center text-white">
         <div class="flex items-center gap-4 mb-8 md:mb-0">
             <div class="w-20 h-20 bg-white rounded-xl flex items-center justify-center rotate-3 shadow-xl">
@@ -73,7 +82,6 @@
 
     <main class="relative z-10 max-w-7xl mx-auto px-8 mt-24">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24">
-            
             <div class="flex flex-col items-center">
                 <div class="relative group">
                     <div class="w-64 h-64 rounded-full food-circle overflow-hidden">
@@ -84,17 +92,17 @@
                     </div>
                 </div>
                 <div class="w-full mt-12 space-y-6">
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Moin Moin</h4>
-                            <p class="text-[11px] text-stone-500">Steamed savory bean pudding with peppers</p>
+                            <h4 class="font-bold text-white text-lg">Moin Moin</h4>
+                            <p class="text-[11px] text-slate-300">Steamed savory bean pudding with peppers</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$12</span>
                     </div>
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Pepper Soup</h4>
-                            <p class="text-[11px] text-stone-500">Intensely spicy herbal broth with catfish</p>
+                            <h4 class="font-bold text-white text-lg">Pepper Soup</h4>
+                            <p class="text-[11px] text-slate-300">Intensely spicy herbal broth with catfish</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$15</span>
                     </div>
@@ -111,17 +119,17 @@
                     </div>
                 </div>
                 <div class="w-full mt-12 space-y-6">
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Smoky Party Jollof</h4>
-                            <p class="text-[11px] text-stone-500">Fire-roasted rice served with sweet plantain</p>
+                            <h4 class="font-bold text-white text-lg">Smoky Party Jollof</h4>
+                            <p class="text-[11px] text-slate-300">Fire-roasted rice served with sweet plantain</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$22</span>
                     </div>
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Native Jollof</h4>
-                            <p class="text-[11px] text-stone-500">Infused with locust beans and dry fish</p>
+                            <h4 class="font-bold text-white text-lg">Native Jollof</h4>
+                            <p class="text-[11px] text-slate-300">Infused with locust beans and dry fish</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$24</span>
                     </div>
@@ -138,17 +146,17 @@
                     </div>
                 </div>
                 <div class="w-full mt-12 space-y-6">
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Beef Suya Platter</h4>
-                            <p class="text-[11px] text-stone-500">Traditional spice-rubbed steak skewers</p>
+                            <h4 class="font-bold text-white text-lg">Beef Suya Platter</h4>
+                            <p class="text-[11px] text-slate-300">Traditional spice-rubbed steak skewers</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$18</span>
                     </div>
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Peri-Peri Chicken</h4>
-                            <p class="text-[11px] text-stone-500">Half bird with Mozambican chili rub</p>
+                            <h4 class="font-bold text-white text-lg">Peri-Peri Chicken</h4>
+                            <p class="text-[11px] text-slate-300">Half bird with Mozambican chili rub</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$26</span>
                     </div>
@@ -165,17 +173,17 @@
                     </div>
                 </div>
                 <div class="w-full mt-12 space-y-6">
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Egusi & Pounded Yam</h4>
-                            <p class="text-[11px] text-stone-500">Melon seed soup with goat meat</p>
+                            <h4 class="font-bold text-white text-lg">Egusi & Pounded Yam</h4>
+                            <p class="text-[11px] text-slate-300">Melon seed soup with goat meat</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$25</span>
                     </div>
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Efo Riro Special</h4>
-                            <p class="text-[11px] text-stone-500">Rich spinach stew with assorted meats</p>
+                            <h4 class="font-bold text-white text-lg">Efo Riro Special</h4>
+                            <p class="text-[11px] text-slate-300">Rich spinach stew with assorted meats</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$26</span>
                     </div>
@@ -192,17 +200,17 @@
                     </div>
                 </div>
                 <div class="w-full mt-12 space-y-6">
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Grilled Croaker</h4>
-                            <p class="text-[11px] text-stone-500">Whole fish with spicy salsa & chips</p>
+                            <h4 class="font-bold text-white text-lg">Grilled Croaker</h4>
+                            <p class="text-[11px] text-slate-300">Whole fish with spicy salsa & chips</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$35</span>
                     </div>
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Seafood Okra</h4>
-                            <p class="text-[11px] text-stone-500">Lush okra with jumbo prawns & crab</p>
+                            <h4 class="font-bold text-white text-lg">Seafood Okra</h4>
+                            <p class="text-[11px] text-slate-300">Lush okra with jumbo prawns & crab</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$32</span>
                     </div>
@@ -219,17 +227,17 @@
                     </div>
                 </div>
                 <div class="w-full mt-12 space-y-6">
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Warm Puff Puff</h4>
-                            <p class="text-[11px] text-stone-500">Golden dough balls with honey drizzle</p>
+                            <h4 class="font-bold text-white text-lg">Warm Puff Puff</h4>
+                            <p class="text-[11px] text-slate-300">Golden dough balls with honey drizzle</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$8</span>
                     </div>
-                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                    <div class="flex justify-between items-end border-b border-white/20 pb-2">
                         <div class="flex-1">
-                            <h4 class="font-bold text-stone-900 text-lg">Fried Plantain (Dodo)</h4>
-                            <p class="text-[11px] text-stone-500">Caramelized sweet yellow plantains</p>
+                            <h4 class="font-bold text-white text-lg">Fried Plantain (Dodo)</h4>
+                            <p class="text-[11px] text-slate-300">Caramelized sweet yellow plantains</p>
                         </div>
                         <span class="text-xl font-black text-burnt-orange ml-4">$6</span>
                     </div>
@@ -241,19 +249,19 @@
 
     <section class="max-w-7xl mx-auto px-8 py-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div class="relative">
-            <h4 class="text-5xl font-heading text-stone-900 mb-6">Chef's <br><span class="text-gold">Recommendation</span></h4>
+            <h4 class="text-5xl font-heading text-white mb-6">Chef's <br><span class="text-gold">Recommendation</span></h4>
             <div class="rounded-2xl overflow-hidden shadow-2xl transform -rotate-2 border-[12px] border-white">
                 <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=800" class="w-full h-80 object-cover">
             </div>
         </div>
 
-        <div class="bg-white p-12 rounded-3xl shadow-xl border border-stone-100 flex flex-col items-center text-center">
+        <div class="bg-white/10 p-12 rounded-3xl shadow-xl border border-white/20 backdrop-blur-sm flex flex-col items-center text-center">
             <div class="w-32 h-32 rounded-full food-circle overflow-hidden mb-6">
                 <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500" class="w-full h-full object-cover">
             </div>
-            <h5 class="text-2xl font-bold text-stone-900 mb-2">Signature Chapman</h5>
-            <p class="text-stone-500 text-sm mb-6 uppercase tracking-widest">Complimentary for groups of 4+</p>
-            <div class="h-px w-full bg-stone-200 mb-6"></div>
+            <h5 class="text-2xl font-bold text-white mb-2">Signature Chapman</h5>
+            <p class="text-slate-300 text-sm mb-6 uppercase tracking-widest">Complimentary for groups of 4+</p>
+            <div class="h-px w-full bg-white/20 mb-6"></div>
             <p class="font-script text-3xl text-burnt-orange">Taste the Spirit that comes from an Africa Pot</p>
         </div>
     </section>
