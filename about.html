@@ -1,25 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./dist/output.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Eureka Kitchen</title>
+  <link rel="stylesheet" href="./dist/output.css">
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .float-slow {
+      animation: float 7s ease-in-out infinite;
+    }
+    .float-fast {
+      animation: float 4.6s ease-in-out infinite;
+    }
+  </style>
 </head>
-<body class="bg-[#F5980C] overflow-x-hidden h-[800px]">
-    <h2 class="text-3xl relative left-44 top-20 font-bold font-serif hover:text-[35px]">About Us</h2>
-    <h1 class="text-[150px] top-44 font-Header text-white relative left-[300px] hover:drop-shadow-2xl">Welcome</h1>
-    <p class="relative top-44 text-white left-[300px] text-[21px] hover:drop-shadow-2xl">
-            There are many variations of passages of Lorem Ipsum available, <br>
-but the majority have suffered alteration in some form, by injected <br>
-humour, or randomised words which don't look even slightly believable. <br>
+<body class="bg-slate-950 text-stone-100 overflow-x-hidden">
+  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_10%_20%,rgba(245,152,12,0.35),transparent_40%),radial-gradient(circle_at_80%_5%,rgba(255,255,255,0.08),transparent_32%),linear-gradient(180deg,#020617,#0f172a)]"></div>
 
-   There are many variations of passages of Lorem Ipsum available, <br>
-but the majority have suffered alteration in some form, by injected <br>
-humour, or randomised words which don't look even slightly believable. <br>
-    </p>
-    <button class="relative top-80 left-[300px] text-orange-500 bg-white text-[21px] rounded-[16px] w-[152px] font-bold hover:bg-gray-300 hover:drop-shadow-2xl">Today's menu</button>
-    <img class="relative left-[1400px] w-[450px] bottom-52 hover:w-[455px]" src="./dist/Rectangle 9.svg" alt="">
-    <img class="relative left-[1200px] w-[450px] bottom-[780px]" src="./dist/Rectangle 8.svg" alt="">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-lg">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="index.html" class="text-xl font-bold text-orange-400">Eureka Kitchen</a>
+      <div class="flex items-center gap-2 text-sm md:gap-3">
+        <a href="index.html" class="rounded-full px-4 py-2 transition hover:bg-white/10">Home</a>
+        <a href="about.html" class="rounded-full bg-orange-500 px-4 py-2 font-semibold text-black">About</a>
+        <a href="menu.html" class="rounded-full px-4 py-2 transition hover:bg-white/10">Menu</a>
+        <a href="contact.html" class="rounded-full px-4 py-2 transition hover:bg-white/10">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-6 pb-20 pt-12">
+    <section class="grid items-center gap-10 lg:grid-cols-2">
+      <div>
+        <p class="mb-3 inline-block rounded-full border border-orange-300/30 bg-orange-500/20 px-4 py-1 text-sm font-semibold tracking-wide text-orange-200">
+          Our Story
+        </p>
+        <h1 class="mb-4 text-5xl leading-tight text-white sm:text-6xl">
+          We cook food
+          <span class="font-Header text-orange-400">that feels like home</span>
+        </h1>
+        <p class="max-w-xl text-base leading-relaxed text-slate-300">
+          Eureka Kitchen started with one mission: serve bold, comforting meals made from fresh ingredients and local flavors. From quick lunch plates to weekend family dinners, every dish is prepared with care, speed, and consistent quality.
+        </p>
+
+        <div class="mt-8 grid gap-4 sm:grid-cols-3">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <p class="text-3xl font-black text-orange-400">8+</p>
+            <p class="text-sm text-slate-300">Years of service</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <p class="text-3xl font-black text-orange-400">12k+</p>
+            <p class="text-sm text-slate-300">Happy guests</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <p class="text-3xl font-black text-orange-400">40+</p>
+            <p class="text-sm text-slate-300">Menu choices</p>
+          </div>
+        </div>
+
+        <a href="menu.html" class="mt-8 inline-block rounded-full bg-orange-500 px-6 py-3 font-bold text-black transition hover:bg-orange-400">
+          Explore Today's Menu
+        </a>
+      </div>
+
+      <div class="relative min-h-[420px]">
+        <div class="float-slow absolute left-0 top-14 w-[62%] rounded-3xl border border-white/15 bg-white/10 p-3 backdrop-blur-sm">
+          <img src="./dist/Rectangle 8.svg" alt="Chef plating meal" class="h-full w-full rounded-2xl object-cover">
+        </div>
+        <div class="float-fast absolute bottom-8 right-0 w-[68%] rounded-3xl border border-white/15 bg-white/10 p-3 backdrop-blur-sm">
+          <img src="./dist/Rectangle 9.svg" alt="Guests dining at Eureka Kitchen" class="h-full w-full rounded-2xl object-cover">
+        </div>
+        <div class="absolute right-8 top-0 rounded-2xl border border-orange-300/30 bg-orange-500/20 px-4 py-3 text-sm text-orange-100 backdrop-blur">
+          Open Daily: 8am - 10pm
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-20 rounded-3xl border border-white/10 bg-white/5 p-8 sm:p-10">
+      <h2 class="text-3xl font-bold text-white">What makes us different</h2>
+      <div class="mt-8 grid gap-5 md:grid-cols-3">
+        <article class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
+          <h3 class="text-lg font-bold text-orange-300">Fresh Every Morning</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-300">
+            Our kitchen starts early so every plate is built on fresh produce, protein, and carefully prepared sauces.
+          </p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
+          <h3 class="text-lg font-bold text-orange-300">Fast, Friendly Service</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-300">
+            Whether dine-in or takeaway, we prioritize fast turnaround without compromising consistency.
+          </p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
+          <h3 class="text-lg font-bold text-orange-300">Community Driven</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-300">
+            Eureka Kitchen proudly serves local families, workers, and students with food built around real routines.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

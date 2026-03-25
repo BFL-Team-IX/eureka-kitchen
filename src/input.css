@@ -3,41 +3,49 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width: 768px) {
+@layer base {
+    :root {
+        --brand: #f97316;
+        --brand-dark: #c2410c;
+        --bg-ink: #020617;
+        --bg-midnight: #0f172a;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
-        overflow-x: hidden !important;
+        @apply overflow-x-hidden bg-slate-950 text-stone-100;
+        font-family: "Quicksand", sans-serif;
     }
 
-    h2 {
-        left: 20px !important;
-        top: 10px !important;
-        font-size: 20px !important;
+    h1,
+    h2,
+    h3 {
+        font-family: "Lily Script One", cursive;
+        letter-spacing: 0.02em;
+    }
+}
+
+@layer components {
+    .glass-card {
+        @apply rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-md;
     }
 
-    h1 {
-        font-size: 50px !important;
-        left: 20px !important;
-        top: 30px !important;
+    .nav-pill {
+        @apply rounded-full px-4 py-2 text-sm font-semibold transition duration-300 hover:bg-white/10;
     }
 
-    p {
-        left: 20px !important;
-        top: 30px !important;
-        font-size: 14px !important;
-        width: 90vw !important;
+    .btn-primary {
+        @apply inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-3 font-bold text-black transition duration-300 hover:bg-orange-400;
     }
 
-    button {
-        left: 20px !important;
-        top: 60px !important;
+    .section-shell {
+        @apply mx-auto max-w-6xl px-6;
     }
 
-    img {
-        position: relative !important;
-        left: 0 !important;
-        bottom: 0 !important;
-        top: 80px !important;
-        width: 100% !important;
-        display: block !important;
+    .feature-chip {
+        @apply rounded-full border border-orange-300/30 bg-orange-500/20 px-4 py-2 text-sm font-semibold text-orange-100;
     }
 }
