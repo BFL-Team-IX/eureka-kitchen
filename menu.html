@@ -4,116 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
-    <title>Restaurant Food Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playfair+Display:ital,wght@0,900;1,900&family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <title>Eureka Kitchen | African Fusion Menu</title>
     <style>
+        html { scroll-behavior: smooth; }
         body { 
             font-family: 'Poppins', sans-serif; 
-            background-color: #ffffff;
-            background-image: url('https://www.transparenttextures.com/patterns/food.png'); /* Subtle texture */
+            background-color: #fdfaf5;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
         }
         .font-script { font-family: 'Caveat', cursive; }
+        .font-heading { font-family: 'Playfair Display', serif; }
         
-        /* The Dark Header Shape */
         .header-clip {
-            background-color: #c0900c;
-            clip-path: ellipse(120% 100% at 20% 0%);
+            background: linear-gradient(135deg, #d3640f 0%, #743b18 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
         }
 
-        /* Brown Price Color */
-        .text-brown-price { color: #5d4037; }
+        .text-gold { color: #c0900c; }
+        .bg-gold { background-color: #c0900c; }
+        .text-burnt-orange { color: #b34700; }
 
-        /* Red Brush Effect for Category Titles */
         .brush-label {
-            background: #e11d48;
-            padding: 4px 40px;
-            border-radius: 9999px;
-            transform: rotate(-2deg);
-            box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+            background: #b34700;
+            padding: 6px 35px;
+            border-radius: 5px;
+            transform: rotate(-1.5deg);
+            box-shadow: 5px 5px 0px #c0900c;
         }
 
-        /* Food Circle Borders */
         .food-circle {
-            border: 10px solid #e11d48;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            border: 8px solid #ffffff;
+            outline: 2px solid #c0900c;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+
+        .food-circle:hover {
+            transform: translateY(-10px);
+            outline-width: 4px;
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased text-stone-800">
 
-    <div class="header-clip absolute top-0 left-0 w-full h-[300px] z-0"></div>
+    <div class="header-clip absolute top-0 left-0 w-full h-[450px] z-0"></div>
     
-    <header class="relative z-10 max-w-7xl mx-auto px-8 pt-10 flex justify-between items-start text-white">
-        <div>
-            <div class="flex items-center gap-3">
-                <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center">
-                    <span class="text-gray-800 text-3xl font-black">EK</span>
-                </div>
-                <div>
-                    <h1 class="text-2xl font-black tracking-tight leading-none">EUREKA KITCHEN</h1>
-                    <p class="text-[10px] opacity-80 mt-1">your favorite food</p>
-                </div>
+    <header class="relative z-10 max-w-7xl mx-auto px-8 pt-12 flex flex-col md:flex-row justify-between items-center text-white">
+        <div class="flex items-center gap-4 mb-8 md:mb-0">
+            <div class="w-20 h-20 bg-white rounded-xl flex items-center justify-center rotate-3 shadow-xl">
+                <span class="text-stone-900 text-4xl font-black">EK</span>
+            </div>
+            <div>
+                <h1 class="text-3xl font-black tracking-widest leading-none">EUREKA <span class="text-gold">KITCHEN</span></h1>
+                <p class="text-xs tracking-[0.3em] uppercase opacity-70 mt-1">Authentic African Flavors</p>
             </div>
         </div>
 
-        <div class="text-right max-w-md">
-            <h2 class="text-5xl md:text-6xl font-black text-rose-600 italic leading-none">RESTAURANT</h2>
-            <h3 class="text-4xl font-script text-white mt-2">Food Menu</h3>
-            <p class="text-[11px] leading-relaxed mt-4 opacity-90 font-light">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        <div class="text-center md:text-right max-w-lg">
+            <h2 class="text-6xl md:text-7xl font-heading italic leading-none text-gold">The Menu</h2>
+            <h3 class="text-3xl font-script text-white/90 mt-2">A Taste of Heritage</h3>
+            <div class="h-1 w-24 bg-gold ml-auto my-4 hidden md:block"></div>
+            <p class="text-sm leading-relaxed mt-4 opacity-80 font-light italic">
+                Experience the rich spices and vibrant traditions of the continent.
             </p>
         </div>
     </header>
 
-    <main class="relative z-10 max-w-7xl mx-auto px-8 mt-20">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+    <main class="relative z-10 max-w-7xl mx-auto px-8 mt-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24">
             
             <div class="flex flex-col items-center">
                 <div class="relative group">
                     <div class="w-64 h-64 rounded-full food-circle overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1546548970-71785318a17b?w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxfmR5h6BmSkdcg6hAHf9kWEcuDv3Rj0Sxmw&s" class="w-full h-full object-cover">
                     </div>
                     <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 brush-label">
-                        <span class="text-3xl font-script text-white">Pasta</span>
+                        <span class="text-2xl font-bold text-white uppercase tracking-tighter">Starters</span>
                     </div>
                 </div>
-                
-                <div class="w-full mt-12 space-y-5">
-                    <div class="flex justify-between items-end border-b border-dotted border-gray-400 pb-2">
-                        <div>
-                            <h4 class="text-rose-600 font-bold uppercase text-sm">Item Name</h4>
-                            <p class="text-[10px] text-gray-500 italic">Lorem ipsum is simply dummy text</p>
+                <div class="w-full mt-12 space-y-6">
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Moin Moin</h4>
+                            <p class="text-[11px] text-stone-500">Steamed savory bean pudding with peppers</p>
                         </div>
-                        <span class="text-xl font-black text-brown-price">$ 15</span>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$12</span>
                     </div>
-                    <div class="flex justify-between items-end border-b border-dotted border-gray-400 pb-2">
-                        <div><h4 class="text-rose-600 font-bold uppercase text-sm">Item Name</h4><p class="text-[10px] text-gray-500 italic">Lorem ipsum is simply dummy text</p></div>
-                        <span class="text-xl font-black text-brown-price">$ 15</span>
-                    </div>
-                    <div class="flex justify-between items-end border-b border-dotted border-gray-400 pb-2">
-                        <div><h4 class="text-rose-600 font-bold uppercase text-sm">Item Name</h4><p class="text-[10px] text-gray-500 italic">Lorem ipsum is simply dummy text</p></div>
-                        <span class="text-xl font-black text-brown-price">$ 15</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col items-center">
-                <div class="relative group">
-                    <div class="w-64 h-64 rounded-full food-circle overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 brush-label">
-                        <span class="text-3xl font-script text-white">Burger</span>
-                    </div>
-                </div>
-                <div class="w-full mt-12 space-y-5">
-                    <div class="flex justify-between items-end border-b border-dotted border-gray-400 pb-2">
-                        <div><h4 class="text-rose-600 font-bold uppercase text-sm">Item Name</h4><p class="text-[10px] text-gray-500 italic">Lorem ipsum is simply dummy text</p></div>
-                        <span class="text-xl font-black text-brown-price">$ 15</span>
-                    </div>
-                    <div class="flex justify-between items-end border-b border-dotted border-gray-400 pb-2">
-                        <div><h4 class="text-rose-600 font-bold uppercase text-sm">Item Name</h4><p class="text-[10px] text-gray-500 italic">Lorem ipsum is simply dummy text</p></div>
-                        <span class="text-xl font-black text-brown-price">$ 15</span>
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Pepper Soup</h4>
+                            <p class="text-[11px] text-stone-500">Intensely spicy herbal broth with catfish</p>
+                        </div>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$15</span>
                     </div>
                 </div>
             </div>
@@ -121,80 +104,172 @@
             <div class="flex flex-col items-center">
                 <div class="relative group">
                     <div class="w-64 h-64 rounded-full food-circle overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://plus.unsplash.com/premium_photo-1694141252132-2555bae46f50?w=500" class="w-full h-full object-cover">
                     </div>
                     <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 brush-label">
-                        <span class="text-3xl font-script text-white">Pizza</span>
+                        <span class="text-2xl font-bold text-white uppercase tracking-tighter">The Jollof</span>
                     </div>
                 </div>
-                <div class="w-full mt-12 space-y-5">
-                    <div class="flex justify-between items-end border-b border-dotted border-gray-400 pb-2">
-                        <div><h4 class="text-rose-600 font-bold uppercase text-sm">Item Name</h4><p class="text-[10px] text-gray-500 italic">Lorem ipsum is simply dummy text</p></div>
-                        <span class="text-xl font-black text-brown-price">$ 15</span>
+                <div class="w-full mt-12 space-y-6">
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Smoky Party Jollof</h4>
+                            <p class="text-[11px] text-stone-500">Fire-roasted rice served with sweet plantain</p>
+                        </div>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$22</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Native Jollof</h4>
+                            <p class="text-[11px] text-stone-500">Infused with locust beans and dry fish</p>
+                        </div>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$24</span>
                     </div>
                 </div>
             </div>
-                <div class="flex flex-col items-center">
+
+            <div class="flex flex-col items-center">
                 <div class="relative group">
                     <div class="w-64 h-64 rounded-full food-circle overflow-hidden">
-                        <img src="https://plus.unsplash.com/premium_photo-1694141252026-3df1de888a21?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8am9sbG9mJTIwcmljZXxlbnwwfHwwfHx8MA%3D%3D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://media.istockphoto.com/id/1452442184/photo/closeup-delicious-chinese-gourmet-dongpo-pork.jpg?s=1024x1024&w=is&k=20&c=k6vcIniEQgk_ZvaETdg1UeaMH5aATizmn8E0LkcoyMI=" class="w-full h-full object-cover">
                     </div>
                     <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 brush-label">
-                        <span class="text-3xl font-script text-white">Jollof Rice</span>
+                        <span class="text-2xl font-bold text-white uppercase tracking-tighter">The Grill</span>
                     </div>
                 </div>
-                <div class="w-full mt-12 space-y-5">
-                    <div class="flex justify-between items-end border-b border-dotted border-gray-400 pb-2">
-                        <div><h4 class="text-rose-600 font-bold uppercase text-sm">Item Name</h4><p class="text-[10px] text-gray-500 italic">Lorem ipsum is simply dummy text</p></div>
-                        <span class="text-xl font-black text-brown-price">$ 15</span>
+                <div class="w-full mt-12 space-y-6">
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Beef Suya Platter</h4>
+                            <p class="text-[11px] text-stone-500">Traditional spice-rubbed steak skewers</p>
+                        </div>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$18</span>
                     </div>
-                    <div class="flex justify-between items-end border-b border-dotted border-gray-400 pb-2">
-                        <div><h4 class="text-rose-600 font-bold uppercase text-sm">Item Name</h4><p class="text-[10px] text-gray-500 italic">Lorem ipsum is simply dummy text</p></div>
-                        <span class="text-xl font-black text-brown-price">$ 15</span>
-                    </div>
-             
-                </div> 
-                <div class="relative group">
-                    <div class="w-64 h-64 rounded-full food-circle overflow-hidden">
-                        <img src="https://plus.unsplash.com/premium_photo-1694141252026-3df1de888a21?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8am9sbG9mJTIwcmljZXxlbnwwfHwwfHx8MA%3D%3D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 brush-label">
-                        <span class="text-3xl font-script text-white">Pounded Yam</span>
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Peri-Peri Chicken</h4>
+                            <p class="text-[11px] text-stone-500">Half bird with Mozambican chili rub</p>
+                        </div>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$26</span>
                     </div>
                 </div>
-                <div class="w-full mt-12 space-y-5">
-                    <div class="flex justify-between items-end border-b border-dotted border-gray-400 pb-2">
-                        <div><h4 class="text-rose-600 font-bold uppercase text-sm">Item Name</h4><p class="text-[10px] text-gray-500 italic">Lorem ipsum is simply dummy text</p></div>
-                        <span class="text-xl font-black text-brown-price">$ 15</span>
-                    </div>
-                    <div class="flex justify-between items-end border-b border-dotted border-gray-400 pb-2">
-                        <div><h4 class="text-rose-600 font-bold uppercase text-sm">Item Name</h4><p class="text-[10px] text-gray-500 italic">Lorem ipsum is simply dummy text</p></div>
-                        <span class="text-xl font-black text-brown-price">$ 15</span>
-                    </div>
-                </div> 
             </div>
+
+            <div class="flex flex-col items-center">
+                <div class="relative group">
+                    <div class="w-64 h-64 rounded-full food-circle overflow-hidden">
+                        <img src="https://lowcarbafrica.com/wp-content/uploads/2024/10/African-Soups.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 brush-label">
+                        <span class="text-2xl font-bold text-white uppercase tracking-tighter">Soups</span>
+                    </div>
+                </div>
+                <div class="w-full mt-12 space-y-6">
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Egusi & Pounded Yam</h4>
+                            <p class="text-[11px] text-stone-500">Melon seed soup with goat meat</p>
+                        </div>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$25</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Efo Riro Special</h4>
+                            <p class="text-[11px] text-stone-500">Rich spinach stew with assorted meats</p>
+                        </div>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$26</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div class="relative group">
+                    <div class="w-64 h-64 rounded-full food-circle overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?w=500" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 brush-label">
+                        <span class="text-2xl font-bold text-white uppercase tracking-tighter">Coastal</span>
+                    </div>
+                </div>
+                <div class="w-full mt-12 space-y-6">
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Grilled Croaker</h4>
+                            <p class="text-[11px] text-stone-500">Whole fish with spicy salsa & chips</p>
+                        </div>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$35</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Seafood Okra</h4>
+                            <p class="text-[11px] text-stone-500">Lush okra with jumbo prawns & crab</p>
+                        </div>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$32</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div class="relative group">
+                    <div class="w-64 h-64 rounded-full food-circle overflow-hidden">
+                        <img src="https://eatwellabi.com/wp-content/uploads/2021/09/Yam-chips-7-720x553.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 brush-label">
+                        <span class="text-2xl font-bold text-white uppercase tracking-tighter">Sweets</span>
+                    </div>
+                </div>
+                <div class="w-full mt-12 space-y-6">
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Warm Puff Puff</h4>
+                            <p class="text-[11px] text-stone-500">Golden dough balls with honey drizzle</p>
+                        </div>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$8</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b border-stone-300 pb-2">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-stone-900 text-lg">Fried Plantain (Dodo)</h4>
+                            <p class="text-[11px] text-stone-500">Caramelized sweet yellow plantains</p>
+                        </div>
+                        <span class="text-xl font-black text-burnt-orange ml-4">$6</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
-    <section class="max-w-7xl mx-auto px-8 py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section class="max-w-7xl mx-auto px-8 py-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div class="relative">
-            <h4 class="text-4xl font-script text-gray-700 mb-6">Special Offer Available</h4>
-            <div class="rounded-3xl overflow-hidden border-8 border-white shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1593504049359-7b7d92c7385f?w=800" class="w-full h-72 object-cover">
+            <h4 class="text-5xl font-heading text-stone-900 mb-6">Chef's <br><span class="text-gold">Recommendation</span></h4>
+            <div class="rounded-2xl overflow-hidden shadow-2xl transform -rotate-2 border-[12px] border-white">
+                <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=800" class="w-full h-80 object-cover">
             </div>
         </div>
 
-        <div class="flex flex-col items-center md:items-end">
-            <div class="relative">
-                <div class="w-60 h-60 rounded-full food-circle overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1544145945-f904253d0c7b?w=500" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-rose-600 text-white px-8 py-2 rounded-full shadow-xl">
-                    <span class="text-2xl font-script whitespace-nowrap">Free Drink's</span>
-                </div>
+        <div class="bg-white p-12 rounded-3xl shadow-xl border border-stone-100 flex flex-col items-center text-center">
+            <div class="w-32 h-32 rounded-full food-circle overflow-hidden mb-6">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500" class="w-full h-full object-cover">
             </div>
+            <h5 class="text-2xl font-bold text-stone-900 mb-2">Signature Chapman</h5>
+            <p class="text-stone-500 text-sm mb-6 uppercase tracking-widest">Complimentary for groups of 4+</p>
+            <div class="h-px w-full bg-stone-200 mb-6"></div>
+            <p class="font-script text-3xl text-burnt-orange">Taste the Spirit that comes from an Africa Pot</p>
         </div>
     </section>
+
+    <footer class="bg-stone-900 text-stone-400 py-16 text-center">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-white font-black text-2xl mb-4">EUREKA KITCHEN</div>
+            <p class="text-sm mb-8"> Rayfield Atiku street ; +234 8143477093 EUREKA-KITCHEN</p>
+            <div class="flex justify-center gap-6 mb-8 text-white">
+                <a href="#" class="hover:text-gold">Instagram</a>
+                <a href="#" class="hover:text-gold">Twitter</a>
+                <a href="#" class="hover:text-gold">Facebook</a>
+            </div>
+            <p class="text-[10px] uppercase tracking-widest opacity-50">&copy; 2026 Eureka Kitchen. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
